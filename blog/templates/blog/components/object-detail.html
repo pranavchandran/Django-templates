@@ -1,0 +1,13 @@
+{%if not micro%}
+
+<p class="bold"><a class='{%cycle "bold" ""%}'href="/blog/{{ object.id }}">{{object.id}} {{object.title}}</a></p>
+
+<small>{{object.timestamp|date:"D d M Y f a " }}</small>
+
+<hr>
+{%else%}
+
+<!-- <h1>There is no micro all contents are hided</h1> -->
+
+{%endif%}
+

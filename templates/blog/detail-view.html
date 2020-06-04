@@ -1,0 +1,8 @@
+{%extends 'blog/base.html'%}
+
+{%block content%}
+
+<h3>Detail override</h3>
+{% include "blog/components/object-detail.html" with object=object %} 
+<h4>{{object.content}}</h4>
+{%endblock content  %}

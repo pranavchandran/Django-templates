@@ -1,0 +1,56 @@
+<h1>{{viewTitle|title}}</h1>
+
+<h1>{{viewTitle|lower}}</h1>
+
+<h3>Price {{total|add:tax}}</h3>
+
+<p>{{today|date:"D d M Y f a " }}</p>
+
+<style>
+    .bold{
+        font-weight: bold;
+    }
+</style>
+
+<ul>
+    {%for item in objects_list%}
+    {%for item in objects_list%}
+        <li class="{%cycle "" "" "" "" "bold" %}">
+            {{forloop.counter}}
+            {{item}}
+        </li>
+    {%endfor%}
+    {%endfor%}
+
+    </ul>
+
+
+
+<ul>
+    {%for item in objects_list%}
+        <li>
+            {%if forloop.counter|divisibleby:2%}
+            
+            <a style="background-color:powderblue;">
+                {{item}}
+            {%else%}
+            <a style="background-color:red;">
+                {{item}}
+                
+            {%endif%}
+            <!-- {{item}} -->
+        </li>
+    {%endfor%}
+    </ul>
+    
+
+
+<ul>
+{%for item in objects_list%}
+    <li>
+        {{forloop.counter}}
+        {%if forloop.first%}First item {%endif%}
+        {{item}}
+    </li>
+{%endfor%}
+</ul>
